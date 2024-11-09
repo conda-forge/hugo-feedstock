@@ -28,7 +28,7 @@ if [[ "$target_platform" == "linux-ppc64le" ]]; then
     # based projects: https://github.com/google/go-licenses/issues/128
     # Note: most of the errors are coming from the standard library
     # such as os, net, etc.; they are not too relevant to the build.
-    go run https://github.com/google/go-licenses@v1.0.0 save . --save_path ./library_licenses
+    go run github.com/google/go-licenses@v1.0.0 save . --save_path ./library_licenses
 else
     go-licenses save . --save_path ./library_licenses
 fi
