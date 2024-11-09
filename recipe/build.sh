@@ -5,21 +5,26 @@ set -ex
 GO_VERSION="1.23.3"
 
 # Determine OS and architecture for Go download
+# Set empty GOROOT for Linux builds based on
+# https://stackoverflow.com/a/57892698
 case "$target_platform" in
     linux-64)
         GO_TARBALL="go${GO_VERSION}.linux-amd64.tar.gz"
+        export GOROOT=""
         ;;
     linux-aarch64)
         GO_TARBALL="go${GO_VERSION}.linux-arm64.tar.gz"
+        export GOROOT=""
         ;;
     linux-ppc64le)
         GO_TARBALL="go${GO_VERSION}.linux-ppc64le.tar.gz"
+        export GOROOT=""
         ;;
     osx-64)
         GO_TARBALL="go${GO_VERSION}.darwin-amd64.tar.gz"
         ;;
     osx-arm64)
-        GO_TARBALL="go${GO_VERSION}..darwin-arm64.tar.gz"
+        GO_TARBALL="go${GO_VERSION}.darwin-arm64.tar.gz"
         ;;
     *)
         echo "Unsupported platform: $target_platform"
