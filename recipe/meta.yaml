@@ -10,7 +10,7 @@ source:
   sha256: 45594ddf39d62d227cfd54c19fb9a09ab851cf537caee6138de0ddd4f1f6f117
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   # Hugo binaries are statically linked on Windows, so the
   # following silences some warnings from conda-forge about
@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - {{ compiler('go-cgo') }} >=1.20
+    - {{ compiler('go-cgo') }} >=1.20  # [not (linux and ppc64le)]
     - go-licenses
 
 test:
