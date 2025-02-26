@@ -1,5 +1,5 @@
 {% set name = "hugo" %}
-{% set version = "0.144.2" %}
+{% set version = "0.145.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gohugoio/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f49a3a6148ee3f4a7bdc331ec6fe2bb106c5e54268dc5b8d3f00fbffc99d6f5d
+  sha256: f6cfcfa4575ff25a08e68b638367df60b28e28a7917471c5deec6396eae26ae2
 
 build:
   number: 0
