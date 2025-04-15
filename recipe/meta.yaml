@@ -10,7 +10,7 @@ source:
   sha256: 0f22fdc8116c0e30f4ea2ba6e2ede2e7d00682cc64f2419dfcb1cfd77966cc88
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   # Hugo binaries are statically linked on Windows, so the
   # following silences some warnings from conda-forge about
@@ -36,7 +36,7 @@ test:
 about:
   home: https://gohugo.io/
   dev_url: https://github.com/gohugoio/hugo
-  summary: The extended version of the Hugo static site generator – the world's fastest framework for building websites.
+  summary: The extended + withdeploy version of the Hugo static site generator – the world's fastest framework for building websites.
   license: Apache-2.0
   license_file:
     - LICENSE
