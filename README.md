@@ -233,6 +233,3 @@ Feedstock Maintainers
 * [@dbast](https://github.com/dbast/)
 * [@moritzwilksch](https://github.com/moritzwilksch/)
 
-
-<!-- dummy commit to enable rerendering -->
-
