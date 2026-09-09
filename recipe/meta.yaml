@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('c') }}                    # [not (win and arm64)]
     - {{ compiler('cxx') }}                  # [not (win and arm64)]
     - {{ stdlib("c") }}                      # [not (win and arm64)]
-    - {{ compiler('go-cgo') }} >=1.26        # [not (win and arm64)]
+    - {{ compiler('go-cgo') }} >=1.27        # [not (win and arm64)]
     - {{ compiler('go-nocgo') }}             # [win and arm64]
     - go-licenses
 
