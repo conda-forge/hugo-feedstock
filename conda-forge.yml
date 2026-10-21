@@ -10,6 +10,5 @@ provider:
   win_arm64: default
   osx_arm64: default
 build_platform:
-  linux_ppc64le: linux_64
   win_arm64: win_64
 test: native_and_emulated
