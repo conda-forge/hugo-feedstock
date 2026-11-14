@@ -17,6 +17,8 @@ requirements:
   build:
     - {{ compiler('go-nocgo') }} >=1.27.4
     - go-licenses
+  run:
+    - __osx >=13.0  # [osx]
 
 test:
   commands:
