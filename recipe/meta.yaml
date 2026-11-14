@@ -10,34 +10,25 @@ source:
   sha256: dac429f01212d06979a1e939307f5bffdbfd3f75a63eba0fe3c817383d0525fe
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
-  # Hugo binaries are statically linked on Windows, so the
-  # following silences some warnings from conda-forge about
-  # already exported DSOs.
-  ignore_run_exports:
-    - libstdcxx  # [win]
-    - libwinpthread  # [win]
-    - libgcc  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}                    # [not (win and arm64)]
-    - {{ compiler('cxx') }}                  # [not (win and arm64)]
-    - {{ stdlib("c") }}                      # [not (win and arm64)]
-    - {{ compiler('go-cgo') }} >=1.27.2        # [not (win and arm64)]
-    - {{ compiler('go-nocgo') }}             # [win and arm64]
+    - {{ compiler('go-nocgo') }} >=1.27.4
+    - {{ stdlib("c") }}  # [osx]
     - go-licenses
 
 test:
   commands:
     - hugo help
     - hugo version
+    - hugo deploy --help
 
 about:
   home: https://gohugo.io/
   dev_url: https://github.com/gohugoio/hugo
-  summary: The extended version of the Hugo static site generator – the world's fastest framework for building websites.
+  summary: The deploy edition of the Hugo static site generator – the world's fastest framework for building websites.
   license: Apache-2.0
   license_file:
     - LICENSE
